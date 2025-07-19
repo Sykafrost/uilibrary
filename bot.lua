@@ -73,15 +73,6 @@ if LocalPLR.Name ~= Username then
         Time = 6
     })
 
-    local latestVersion = request({ Url = "https://raw.githubusercontent.com/sixpennyfox4/ControlBotZ/refs/heads/main/ControlBotZ%20Version", Method = "GET" }).Body:match("^%s*(.-)%s*$")
-    if latestVersion ~= "1.1.4" then
-        game:GetService("StarterGui"):SetCore("SendNotification", {
-            Title = "Old Version!",
-            Text = "Looks like you are using old version. Get the newest one from the discord server!",
-            Time = 8
-        })
-    end
-
     function showDefaultGui(enabled, text)
 
         if enabled == true then
